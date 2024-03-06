@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PeaceTure Photography</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="shortcut icon" href="https://toogood.netlify.app/bg.jpg" type="image/x-icon">
+</head>
+<body>
+    <nav>
+        <div class="navbar-logo">
+            <a href="/"><img src="/proImages/1-modified.png" alt=""></a>
+        </div>
+        <ul class="navbar-menu">
+            <li>
+                <a class="" href="/about">About</a>
+            </li>
+            <li>
+                <a class="" href="/portfolio">Portfolio</a>
+            </li>
+            <li>
+                <a class="" href="/submit">Submit</a>
+            </li>
+            <li>
+                <a class="" href="/images">Images</a>
+            </li>
+            <li>
+                <a class="" href="/posts">Posts</a>
+            </li>
+            <li>
+                <a class="active" href="/contact">Contact</a>
+            </li>
+          </ul>
+    </nav>
+
+<div class="contact">
+  <h1>Contact Us</h1>
+  <br />
+  <p>
+    Whether you want to enquire or start a new project, just
+    <span style="color: #bffff0">contact us</span>.
+  </p>
+  <form
+    name="gform"
+    id="gform"
+    enctype="text/plain"
+    action="https://docs.google.com/forms/d/e/1FAIpQLSc6-yyd_NqFzILyV0siV2fwFXUMEtJ4OxYwQed5MrgGlh2RwA/formResponse?"
+    target="hidden_iframe"
+    onsubmit="submitted=true;"
+  >
+    <label for="entry.1507413414">Name : </label>
+    <input type="text" name="entry.1507413414" id="entry.1507413414" required />
+    <label for="entry.2010504488">Email : </label>
+    <input
+      type="email"
+      name="entry.2010504488"
+      id="entry.2010504488"
+      required
+    />
+    <label for="textarea">Message : </label>
+    <textarea
+      name="entry.732095473"
+      id="entry.732095473"
+      cols="30"
+      rows="10"
+      required
+    ></textarea>
+    <br />
+    <input class="submit1" type="submit" value="Submit" />
+  </form>
+
+  <iframe
+    name="hidden_iframe"
+    id="hidden_iframe"
+    style="display: none"
+    onload="if(submitted) {}"
+  ></iframe>
+</div>
+
+<footer>
+    <p>Copyright ©PeaceTure Photography 2023</p>
+</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script type="text/javascript">
+    var submitted = false;
+  </script>
+  <script type="text/javascript">
+    $("#gform").on("submit", function (e) {
+      $("#gform *").fadeOut(1000);
+      $("#gform").prepend(
+        '<p style="color:yellow; border-bottom: 20px">Thank you for contacting!</p>'
+      );
+    });
+  </script>
+</body>
+</html>
